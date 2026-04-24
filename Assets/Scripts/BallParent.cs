@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class BallParent : MonoBehaviour
 {
-    private int? myNumber = null;
+    public int myNumber;
     private bool selected = false;
     
 
