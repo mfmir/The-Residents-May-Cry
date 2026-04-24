@@ -1,7 +1,12 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PapaBallScript : MonoBehaviour
 {
+    private int[] secret_code = new[] { 1, 2, 3, 1, 1 };
+    Queue<int> active = new Queue<int>();
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,8 +22,24 @@ public class PapaBallScript : MonoBehaviour
         }
     }
 
+    private void GotTheAnswer()
+    {
+        while (active.Count > secret_code.Length)
+        {
+            active.Dequeue();
+        }
+        
+        if (active.SequenceEqual(secret_code))
+        {
+            Debug.Log("You got the answer!");
+        };
+    }
+
     public void childPressed(int what)
     {
         Debug.Log("Child pressed " + what);
+        active.Enqueue(what);
+        
+        GotTheAnswer();
     }
 }
