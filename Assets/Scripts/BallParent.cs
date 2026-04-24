@@ -23,8 +23,7 @@ public class BallParent : MonoBehaviour
 
     private void CallParentThatIWasPressed()
     {
-        Debug.Log(myNumber);
-        Debug.Log(selected);
+        transform.parent.GetComponent<PapaBallScript>().childPressed(myNumber);
     }
 
     private void OnMouseDown()
