@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class BallParent : MonoBehaviour
 {
-    private int? myNumber = null;
+    private int myNumber = -1;
     private bool selected = false;
     
 
@@ -23,8 +23,7 @@ public class BallParent : MonoBehaviour
 
     private void CallParentThatIWasPressed()
     {
-        Debug.Log(myNumber);
-        Debug.Log(selected);
+        transform.parent.GetComponent<PapaBallScript>().childPressed(myNumber);
     }
 
     private void OnMouseDown()

@@ -16,4 +16,9 @@ public class PapaBallScript : MonoBehaviour
             //sDebug.Log(child.name);
         }
     }
+
+    public void childPressed(int what)
+    {
+        Debug.Log("Child pressed " + what);
+    }
 }
