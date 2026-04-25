@@ -20,12 +20,15 @@ public class JumpingBoxScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Trigger entered");
         if (other.CompareTag("Player"))
         {
             FirstPersonController player = other.GetComponent<FirstPersonController>();
 
+            Debug.Log("Tag compared");
             if (player != null)
             {
+                Debug.Log("Jumping");
                 player.Jump(100.0f);
             }
         }
