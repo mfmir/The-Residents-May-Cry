@@ -15,11 +15,11 @@ public class LockerImageShower : MonoBehaviour
 
     private RawImage lockerImageUI;
     [SerializeField] private Texture imageToShow;
-    Canvas LockerImage;
+    [SerializeField] private Canvas LockerImage;
+    [SerializeField] private Canvas interactableText;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-    LockerImage = GetComponentInChildren<Canvas>(true);
     lockerImageUI = LockerImage.GetComponentInChildren<RawImage>();
     lockerImageUI.texture = imageToShow;
     }
@@ -28,7 +28,12 @@ public class LockerImageShower : MonoBehaviour
     void Update()
     {
         float distance = Vector3.Distance(player.position, transform.position);
-
+        //show press E
+        if (distance <= interactDistance && !Image_shown && selected)
+        {
+            interactableText.enabled = true;
+        }
+        else interactableText.enabled = false;
         // If player is close and presses E → show
         if (distance <= interactDistance && Keyboard.current.eKey.wasPressedThisFrame && !Image_shown && selected)
         {
