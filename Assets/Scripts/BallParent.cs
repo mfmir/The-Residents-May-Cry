@@ -7,7 +7,7 @@ using TMPro;
 public class BallParent : MonoBehaviour
 {
     public int myNumber;
-    public AudioSource audio;
+    new public AudioSource audio;
     private bool selected = false;
     Canvas canvas;
 
