@@ -34,6 +34,14 @@ public class BallParent : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            CallParentThatIWasPressed();
+        }
+    }
+    
     private void OnMouseDown()
     {
         CallParentThatIWasPressed();
