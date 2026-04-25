@@ -5,6 +5,7 @@ using UnityEngine;
 public class PapaBallScript : MonoBehaviour
 {
     private int[] secret_code = new[] { 2, 1, 3 };
+    private bool isAnswered = false;
     Queue<int> active = new Queue<int>();
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -32,7 +33,12 @@ public class PapaBallScript : MonoBehaviour
         if (active.SequenceEqual(secret_code))
         {
             Debug.Log("You got the answer!");
+            isAnswered = true;
         };
+    }
+    public bool IsAnswered()
+    {
+        return isAnswered;
     }
 
     public void childPressed(int what)
