@@ -1,0 +1,40 @@
+TODO:
+
+Finish secondScene Puzzle
+
+Finish Lasers
+
+Make a way to freeze the player on command
+
+Make Czechia great again - said the one Slovak on our team
+
+Teleport when halfway through lasers
+
+Audio when puzzle solved
+
+
+TriggerBox gets enabled only after the previous finishes
+
+Fail condition audio lines
+
+WinState -> Credits
+
+EasterEggs -> Notes, stuff like that
+
+Main Menu
+
+Tomáši nadabuj to
+
+Music, sound effects
+
+Add paintings, fog, horror atmosphere
+
+
+Title : The Resident, who is evil, May Cry
+Team Name: We are The Residents, who are evil, and may cry, if you do not rate us well.
+watrwaeamciydnruw
+Waterway Cinder
+
+
+
+
