@@ -7,6 +7,7 @@ public class PapaBallScript : MonoBehaviour, IWinCondition
     private int[] secret_code = new[] { 2, 1, 3 };
     private bool done = false;
     Queue<int> active = new Queue<int>();
+    new public AudioSource audio;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,6 +34,7 @@ public class PapaBallScript : MonoBehaviour, IWinCondition
         if (active.SequenceEqual(secret_code))
         {
             Debug.Log("You got the answer!");
+            audio.Play();
             done = true;
         };
     }
