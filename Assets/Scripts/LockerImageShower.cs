@@ -1,0 +1,59 @@
+using System;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class LockerImageShower : MonoBehaviour
+{
+
+
+    private bool Image_shown = false;
+
+    [SerializeField] private Transform player;
+    [SerializeField] private float interactDistance = 3f;
+    Canvas LockerImage;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+    LockerImage = GetComponentInChildren<Canvas>(true);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        float distance = Vector3.Distance(player.position, transform.position);
+
+        // If player is close and presses E → show
+        if (distance <= interactDistance && Keyboard.current.eKey.wasPressedThisFrame && !Image_shown)
+        {
+            ShowLockerImage();
+        }
+
+        // If player walks away → hide
+        if (distance > interactDistance && Image_shown)
+        {
+            HideLockerImage();
+        }
+
+        // Optional: ESC to close
+        if (Keyboard.current.escapeKey.wasPressedThisFrame && Image_shown)
+        {
+            HideLockerImage();
+        }
+    }
+
+    private void ShowLockerImage()
+    {
+        Debug.Log("Showing image");
+        LockerImage.enabled = true;
+        Image_shown = true;
+        
+    }
+    private void HideLockerImage()
+    {
+        LockerImage.enabled = false;
+        Image_shown = false;
+        Debug.Log("HIding image");
+    }
+
+    
+}
