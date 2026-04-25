@@ -22,4 +22,9 @@ public class JumpScareScript : MonoBehaviour
     {
         myCanvas.gameObject.SetActive(true);
     }
+
+    public void HideImage()
+    {
+        myCanvas.gameObject.SetActive(false);
+    }
 }
