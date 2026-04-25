@@ -27,6 +27,7 @@ public class TriggerDialogBox_Tomas : MonoBehaviour
     {
         finished = true;
         HideText();
+        EnableNextTrigger();
     }
 }
     private void OnTriggerEnter(Collider other)
@@ -37,7 +38,7 @@ public class TriggerDialogBox_Tomas : MonoBehaviour
         ShowText();
         audio.Play();
         Debug.Log("Player entered trigger!");
-        EnableNextTrigger();
+        
         triggered = true;
         
     }

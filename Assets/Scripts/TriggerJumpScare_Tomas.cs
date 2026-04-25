@@ -39,7 +39,7 @@ public class TriggerJumpScare_Tomas : MonoBehaviour
     {
         
         Jumpscare();
-        EnableNextTrigger();
+        
     }
 
     private void OnTriggerExit(Collider other)
@@ -67,6 +67,7 @@ public class TriggerJumpScare_Tomas : MonoBehaviour
     {
         Debug.Log("Hiding image");
         LockerImage.enabled = false;
+        EnableNextTrigger();
     }
     private void EnableNextTrigger()
     {
