@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using StarterAssets;
 
 public class BallParent : MonoBehaviour
 {
@@ -39,6 +40,13 @@ public class BallParent : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             CallParentThatIWasPressed();
+            
+            FirstPersonController player = other.GetComponent<FirstPersonController>();
+            
+            if (player != null)
+            {
+                player.Jump(25.0f);
+            }
         }
     }
     

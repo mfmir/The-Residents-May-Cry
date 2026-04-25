@@ -206,12 +206,12 @@ namespace StarterAssets
 			JumpHeight = height;
 
 			_input.jump = true;
-			JumpAndGravity();
+			JumpAndGravity(true);
 		}
 
-		private void JumpAndGravity()
+		private void JumpAndGravity(bool forcedJumped)
 		{
-			if (Grounded)
+			if (Grounded || forcedJumped)
 			{
 				// reset the fall timeout timer
 				_fallTimeoutDelta = FallTimeout;
@@ -223,14 +223,14 @@ namespace StarterAssets
 				}
 
 				// Jump
-				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
+				if (_input.jump && (forcedJumped || _jumpTimeoutDelta <= 0.0f))
 				{
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
 				}
 
 				// jump timeout
-				if (_jumpTimeoutDelta >= 0.0f)
+				if (_jumpTimeoutDelta >= 0.0f || forcedJumped)
 				{
 					_jumpTimeoutDelta -= Time.deltaTime;
 				}
@@ -257,6 +257,11 @@ namespace StarterAssets
 			{
 				_verticalVelocity += Gravity * Time.deltaTime;
 			}
+		}
+
+		private void JumpAndGravity()
+		{
+			JumpAndGravity(false);
 		}
 
 		private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
