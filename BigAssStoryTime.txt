@@ -10,12 +10,16 @@ Welcome Player. So, you want to see what my Haunted House has to offer hmmm? Wel
 2: HAHAHAH, you really thought that I would make this so easy for you?! We're just getting started. Solve my Impossible Puzzle, and you may yet survive.
 
 
+Box with LORE: (note)
+
+
+
 
 3 (solve puzzle):
 Impossible! How can this be!!! Well, no matter. It's not over yet!!
 
 4:
-See that door? Maybe something valuable is on the other side? Your freedom perhaps?
+See that toil? Maybe something valuable is on the other side? Your freedom perhaps?
 
 => další jumpscare
 
@@ -28,9 +32,25 @@ Hahahah, you fool. Now prepare for my next puzzle. You're not getting through th
 6:
 The toilet is disgusting, no normal human would stick their fingers into the water. Muhahahahahahah
 
+Fail Condition: 
+Spongebob - oh brother this guy stinks!
 
 7: WHAAATAATAAATATTATA, THAT CANNOT BEEEEEEEE! You wretched little insect!
 
 => jjump scare!!!!
 
-8: THE LASERS ARE GONNA STOP YOU FOR SURE!
+8: THE LASERS ARE GONNA STOP YOU FOR SURE! FR FR NO CAP 67
+
+Fail Condition:
+: Is it too hot for you? ('high pitched moaning')
+going through lasers: Jumpscares
++ :  You are far enough, back to start you go!
+
+9(in the middle again):
+: This reminds me of Resident Evil.... the movie staring Milla Jovovich and Michelle Rodriguez
+
+
+10: So, you're still alive. Well, that won't be for long. For I .... AM .... EVIL
+
+Ending:
+Just joking im not evil, your performance was over the top. Good job :-) 
