@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ToiletFinishScript : MonoBehaviour
 {
@@ -16,10 +17,14 @@ public class ToiletFinishScript : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Toileto finito");
+        
         if (other.gameObject.tag == "ToiletCube")
         {
-            
+            Debug.Log("Toileto finito");
+        
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            SceneManager.LoadScene("SecondScene");
         }
     }
 }
