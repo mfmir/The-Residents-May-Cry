@@ -1,12 +1,14 @@
+using StarterAssets;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TriggerJumpScare_Tomas : MonoBehaviour
+public class STOP_TriggerJumpScare_Tomas : MonoBehaviour
 {
     private RawImage lockerImageUI;
     [SerializeField] private Texture imageToShow;
     [SerializeField] private TriggerJumpScare_Tomas enableNextJumpScareTrigger;
     [SerializeField] private TriggerDialogBox_Tomas enableNextDialogScareTrigger;
+    [SerializeField] private Transform player;
     Canvas LockerImage;
     bool triggered = false;
     bool finished = false;
@@ -54,6 +56,7 @@ public class TriggerJumpScare_Tomas : MonoBehaviour
     {
         Debug.Log("Showing image");
         LockerImage.enabled = true;
+        player.gameObject.GetComponent<FirstPersonController>().stopped = true;
     }
     public void Jumpscare()
     {
@@ -68,6 +71,7 @@ public class TriggerJumpScare_Tomas : MonoBehaviour
         Debug.Log("Hiding image");
         LockerImage.enabled = false;
         EnableNextTrigger();
+        player.gameObject.GetComponent<FirstPersonController>().stopped = false;
     }
     private void EnableNextTrigger()
     {

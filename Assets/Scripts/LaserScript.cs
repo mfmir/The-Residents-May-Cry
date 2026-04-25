@@ -1,4 +1,5 @@
 using System;
+using System.Transactions;
 using UnityEngine;
 
 public class LaserScript : MonoBehaviour
@@ -16,6 +17,14 @@ public class LaserScript : MonoBehaviour
         
     }
 
+    private void MovePlayer(Collider playerCollision, Vector3 position)
+    {
+        var controller = playerCollision.GetComponent<CharacterController>();
+        controller.enabled = false;
+        controller.transform.position = position;
+        controller.enabled = true;
+    }
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -23,7 +32,9 @@ public class LaserScript : MonoBehaviour
             Debug.Log("Sorry you got hit!");
             var currentRenderer = GetComponent<Renderer>();
             currentRenderer.material = onLaserTouchedMaterial;
-            // TODO: something similar to Destroy(other.gameObject);
+            Debug.Log(other.transform.parent);
+            
+            MovePlayer(other, new Vector3(-68, -3.5f, -230.5f));
         }
     }
 }
