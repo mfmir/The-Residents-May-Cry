@@ -1,10 +1,7 @@
-using System;
 using UnityEngine;
 
-public class BorderScript : MonoBehaviour
+public class ToiletFinishScript : MonoBehaviour
 {
-    private Vector3 initialPos = new Vector3(3.6f, 3.74f, 0.2f);
-    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,13 +16,10 @@ public class BorderScript : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Cube touched");
+        Debug.Log("Toileto finito");
         if (other.gameObject.tag == "ToiletCube")
         {
-            var otherPos = other.GetComponent<Transform>();
-            var otherScript = other.GetComponent<ToiletMoveDragS>();
-            otherPos.position = initialPos;
-            otherScript.Hit();
+            
         }
     }
 }
