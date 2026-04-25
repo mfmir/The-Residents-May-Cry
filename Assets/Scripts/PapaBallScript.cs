@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PapaBallScript : MonoBehaviour
 {
-    private int[] secret_code = new[] { 1, 2, 3, 1, 1 };
+    private int[] secret_code = new[] { 2, 1, 3 };
     Queue<int> active = new Queue<int>();
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created

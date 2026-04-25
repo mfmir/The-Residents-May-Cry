@@ -1,13 +1,15 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using StarterAssets;
+using UnityEngine.UI;
+using TMPro;
 
 public class BallParent : MonoBehaviour
 {
     public int myNumber;
     public AudioSource audio;
     private bool selected = false;
-    
+    Canvas canvas;
 
     protected void setMyNumber(int number)
     {
@@ -26,6 +28,10 @@ public class BallParent : MonoBehaviour
     void Start()
     {
         audio = GetComponent<AudioSource>();
+        canvas = GetComponentInChildren<Canvas>(true);
+        TextMeshProUGUI text = canvas.GetComponentInChildren<TextMeshProUGUI>(true);
+        text.text = myNumber.ToString();
+
     }
 
     private void CallParentThatIWasPressed()
