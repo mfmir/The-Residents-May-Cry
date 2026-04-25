@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -24,6 +25,8 @@ namespace StarterAssets
 		[Space(10)]
 		[Tooltip("The height the player can jump")]
 		public float JumpHeight = 1.2f;
+
+		public float DefaultJumpHeight = 1.2f;
 		[Tooltip("The character uses its own gravity value. The engine default is -9.81f")]
 		public float Gravity = -15.0f;
 
@@ -198,6 +201,17 @@ namespace StarterAssets
 			_controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * Time.deltaTime);
 		}
 
+		public void Jump(float height)
+		{
+			float oldHeight = JumpHeight;
+			JumpHeight = height;
+
+			_input.jump = true;
+			JumpAndGravity();
+
+			//JumpHeight = oldHeight;
+		}
+
 		private void JumpAndGravity()
 		{
 			if (Grounded)
@@ -214,6 +228,8 @@ namespace StarterAssets
 				// Jump
 				if (_input.jump && _jumpTimeoutDelta <= 0.0f)
 				{
+					Debug.Log(JumpHeight);
+					
 					// the square root of H * -2 * G = how much velocity needed to reach desired height
 					_verticalVelocity = Mathf.Sqrt(JumpHeight * -2f * Gravity);
 				}
@@ -238,6 +254,8 @@ namespace StarterAssets
 				// if we are not grounded, do not jump
 				_input.jump = false;
 			}
+			
+			JumpHeight = Math.Max(JumpHeight / 2, DefaultJumpHeight);
 
 			// apply gravity over time if under terminal (multiply by delta time twice to linearly speed up over time)
 			if (_verticalVelocity < _terminalVelocity)
