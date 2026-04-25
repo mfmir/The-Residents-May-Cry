@@ -10,6 +10,7 @@ public class BallParent : MonoBehaviour
     new public AudioSource audio;
     private bool selected = false;
     Canvas canvas;
+    private PapaBallScript parent;
 
     protected void setMyNumber(int number)
     {
@@ -31,13 +32,14 @@ public class BallParent : MonoBehaviour
         canvas = GetComponentInChildren<Canvas>(true);
         TextMeshProUGUI text = canvas.GetComponentInChildren<TextMeshProUGUI>(true);
         text.text = myNumber.ToString();
+        parent = transform.parent.GetComponent<PapaBallScript>();
 
     }
 
     private void CallParentThatIWasPressed()
     {
-        audio.Play();
-        transform.parent.GetComponent<PapaBallScript>().childPressed(myNumber);
+        audio.PlayOneShot(audio.clip);
+        parent.childPressed(myNumber);
         
     }
 
