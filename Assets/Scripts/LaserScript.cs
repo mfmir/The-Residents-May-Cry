@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class LaserScript : MonoBehaviour
 {
+    public Material onLaserTouchedMaterial;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,10 +21,8 @@ public class LaserScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Sorry you got hit!");
-            var material = GetComponentInParent<LaserMazeScript>().onLaserTouchedMaterial;
-            Debug.Log(material);
             var currentRenderer = GetComponent<Renderer>();
-            currentRenderer.material = material;
+            currentRenderer.material = onLaserTouchedMaterial;
             // TODO: something similar to Destroy(other.gameObject);
         }
     }
