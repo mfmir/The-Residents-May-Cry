@@ -5,6 +5,8 @@ public class TriggerJumpScare_Tomas : MonoBehaviour
 {
     private RawImage lockerImageUI;
     [SerializeField] private Texture imageToShow;
+    [SerializeField] private TriggerJumpScare_Tomas enableNextJumpScareTrigger;
+    [SerializeField] private TriggerDialogBox_Tomas enableNextDialogScareTrigger;
     Canvas LockerImage;
     bool triggered = false;
     bool finished = false;
@@ -37,6 +39,7 @@ public class TriggerJumpScare_Tomas : MonoBehaviour
     {
         
         Jumpscare();
+        EnableNextTrigger();
     }
 
     private void OnTriggerExit(Collider other)
@@ -64,5 +67,18 @@ public class TriggerJumpScare_Tomas : MonoBehaviour
     {
         Debug.Log("Hiding image");
         LockerImage.enabled = false;
+    }
+    private void EnableNextTrigger()
+    {
+        if (enableNextDialogScareTrigger is not null)
+        {
+            enableNextDialogScareTrigger.gameObject.SetActive(true);
+            Debug.Log("Next enabled");
+        }
+        if (enableNextJumpScareTrigger is not null)
+        {
+            enableNextJumpScareTrigger.gameObject.SetActive(true);
+            Debug.Log("Next enabled");
+        }
     }
 }

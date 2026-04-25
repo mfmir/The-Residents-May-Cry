@@ -5,6 +5,8 @@ using TMPro;
 public class TriggerDialogBox_Tomas : MonoBehaviour
 {
     [SerializeField] private string textToShow;
+    [SerializeField] private TriggerJumpScare_Tomas enableNextJumpScareTrigger;
+    [SerializeField] private TriggerDialogBox_Tomas enableNextDialogScareTrigger;
     Canvas canvas;
     bool triggered = false;
     bool finished = false;
@@ -31,9 +33,11 @@ public class TriggerDialogBox_Tomas : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
         if (finished) return;
+        if (audio.isPlaying) return;
         ShowText();
         audio.Play();
         Debug.Log("Player entered trigger!");
+        EnableNextTrigger();
         triggered = true;
         
     }
@@ -54,5 +58,18 @@ public class TriggerDialogBox_Tomas : MonoBehaviour
     {
         Debug.Log("Hiding image");
         canvas.enabled = false;
+    }
+    private void EnableNextTrigger()
+    {
+        if (enableNextDialogScareTrigger is not null)
+        {
+            enableNextDialogScareTrigger.gameObject.SetActive(true);
+            Debug.Log("Next enabled");
+        }
+        if (enableNextJumpScareTrigger is not null)
+        {
+            enableNextJumpScareTrigger.gameObject.SetActive(true);
+            Debug.Log("Next enabled");
+        }
     }
 }
