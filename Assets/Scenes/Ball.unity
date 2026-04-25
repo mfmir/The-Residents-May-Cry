@@ -391,6 +391,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1136288132318624511, guid: 7e557643a4edb9041bc68cab8b8057a5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4613470017570802504, guid: 7e557643a4edb9041bc68cab8b8057a5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5550498721805748605, guid: 7e557643a4edb9041bc68cab8b8057a5, type: 3}
       propertyPath: m_Name
       value: Balls
@@ -434,6 +442,10 @@ PrefabInstance:
     - target: {fileID: 6060269517045284405, guid: 7e557643a4edb9041bc68cab8b8057a5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7243786893865850416, guid: 7e557643a4edb9041bc68cab8b8057a5, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
