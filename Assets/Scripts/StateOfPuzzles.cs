@@ -15,7 +15,7 @@ public class StateOfPuzzles : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(puzzle1.IsAnswered())
+        if(puzzle1.IsCompleted())
         {
             SHowCube();
         }

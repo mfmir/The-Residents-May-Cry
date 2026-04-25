@@ -2,10 +2,10 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class PapaBallScript : MonoBehaviour
+public class PapaBallScript : MonoBehaviour, IWinCondition
 {
     private int[] secret_code = new[] { 2, 1, 3 };
-    private bool isAnswered = false;
+    private bool done = false;
     Queue<int> active = new Queue<int>();
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -33,12 +33,12 @@ public class PapaBallScript : MonoBehaviour
         if (active.SequenceEqual(secret_code))
         {
             Debug.Log("You got the answer!");
-            isAnswered = true;
+            done = true;
         };
     }
-    public bool IsAnswered()
+    public bool IsCompleted()
     {
-        return isAnswered;
+        return done;
     }
 
     public void childPressed(int what)
