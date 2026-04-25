@@ -1,0 +1,36 @@
+Narrator Lines
+
+1:
+
+Welcome Player. So, you want to see what my Haunted House has to offer hmmm? Well... Go open that door and let's get started
+
+
+=> JumpScare u dveří
+
+2: HAHAHAH, you really thought that I would make this so easy for you?! We're just getting started. Solve my Impossible Puzzle, and you may yet survive.
+
+
+
+3 (solve puzzle):
+Impossible! How can this be!!! Well, no matter. It's not over yet!!
+
+4:
+See that door? Maybe something valuable is on the other side? Your freedom perhaps?
+
+=> další jumpscare
+
+
+5:
+Hahahah, you fool. Now prepare for my next puzzle. You're not getting through this one!
+
+=> Jumpscare
+
+6:
+The toilet is disgusting, no normal human would stick their fingers into the water. Muhahahahahahah
+
+
+7: WHAAATAATAAATATTATA, THAT CANNOT BEEEEEEEE! You wretched little insect!
+
+=> jjump scare!!!!
+
+8: THE LASERS ARE GONNA STOP YOU FOR SURE!
