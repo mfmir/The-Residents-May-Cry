@@ -4,7 +4,7 @@ Finish secondScene Puzzle
 
 Finish Lasers
 
-Make a way to freeze the player on command
+Make a way to freeze the player on command -- DONE
 
 Make Czechia great again - said the one Slovak on our team
 
