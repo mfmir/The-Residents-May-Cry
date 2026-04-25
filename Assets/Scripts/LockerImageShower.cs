@@ -1,6 +1,8 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class LockerImageShower : MonoBehaviour
 {
@@ -10,11 +12,16 @@ public class LockerImageShower : MonoBehaviour
 
     [SerializeField] private Transform player;
     [SerializeField] private float interactDistance = 3f;
+
+    private RawImage lockerImageUI;
+    [SerializeField] private Texture imageToShow;
     Canvas LockerImage;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
     LockerImage = GetComponentInChildren<Canvas>(true);
+    lockerImageUI = LockerImage.GetComponentInChildren<RawImage>();
+    lockerImageUI.texture = imageToShow;
     }
 
     // Update is called once per frame
@@ -23,7 +30,7 @@ public class LockerImageShower : MonoBehaviour
         float distance = Vector3.Distance(player.position, transform.position);
 
         // If player is close and presses E → show
-        if (distance <= interactDistance && Keyboard.current.eKey.wasPressedThisFrame && !Image_shown)
+        if (distance <= interactDistance && Keyboard.current.eKey.wasPressedThisFrame && !Image_shown && selected)
         {
             ShowLockerImage();
         }
@@ -54,6 +61,11 @@ public class LockerImageShower : MonoBehaviour
         Image_shown = false;
         Debug.Log("HIding image");
     }
+
+    private bool selected = false;
+
+    private void OnMouseEnter() => selected = true;
+    private void OnMouseExit() => selected = false;
 
     
 }
