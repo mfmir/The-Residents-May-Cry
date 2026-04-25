@@ -17,6 +17,8 @@ public class LockerImageShower : MonoBehaviour
     [SerializeField] private Texture imageToShow;
     [SerializeField] private Canvas LockerImage;
     [SerializeField] private Canvas interactableText;
+    [SerializeField] private AudioSource openLockerAudio;
+    [SerializeField] private AudioSource closeLockerAudio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -58,13 +60,14 @@ public class LockerImageShower : MonoBehaviour
         Debug.Log("Showing image");
         LockerImage.enabled = true;
         Image_shown = true;
-        
+        openLockerAudio.Play();      
     }
     private void HideLockerImage()
     {
         LockerImage.enabled = false;
         Image_shown = false;
         Debug.Log("HIding image");
+        closeLockerAudio.Play();
     }
 
     private bool selected = false;
