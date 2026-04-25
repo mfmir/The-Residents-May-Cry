@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class BallParent : MonoBehaviour
 {
     public int myNumber;
+    public AudioSource audio;
     private bool selected = false;
     
 
@@ -21,9 +22,16 @@ public class BallParent : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
+
     private void CallParentThatIWasPressed()
     {
+        audio.Play();
         transform.parent.GetComponent<PapaBallScript>().childPressed(myNumber);
+        
     }
 
     private void OnMouseDown()
