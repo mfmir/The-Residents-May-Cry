@@ -39,7 +39,7 @@ public class MazeCenteredScript : MonoBehaviour
     void Update()
     {
         if (_mazeRotatingCounter <= mazeRotatingTime)
-            transform.Rotate(Vector3.right * (rotationSpeed * Time.deltaTime));
+            transform.Rotate(Vector3.right * rotationSpeed);
         
         _mazeRotatingCounter++;
         if (_mazeRotatingCounter >= rotatingCycleLength)
