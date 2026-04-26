@@ -672,6 +672,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1133397098}
     - target: {fileID: 7789102102688075805, guid: 87d724833c7124191a820ae4fe716582, type: 3}
+      propertyPath: imageToShow
+      value: 
+      objectReference: {fileID: 2800000, guid: d88be5fb59689664fadd74d65433b701, type: 3}
+    - target: {fileID: 7789102102688075805, guid: 87d724833c7124191a820ae4fe716582, type: 3}
       propertyPath: enableNextDialogScareTrigger
       value: 
       objectReference: {fileID: 1793574672}
