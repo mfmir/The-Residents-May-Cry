@@ -873,6 +873,7 @@ GameObject:
   - component: {fileID: 1177678689}
   - component: {fileID: 1177678688}
   - component: {fileID: 1177678687}
+  - component: {fileID: 1177678690}
   m_Layer: 5
   m_Name: QuitButton
   m_TagString: Untagged
@@ -994,6 +995,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177678685}
   m_CullTransparentMesh: 1
+--- !u!114 &1177678690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1177678685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b652f68b3cc2e40e8a61d911ad4b3c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CreditQuitScript
 --- !u!1 &1184832227
 GameObject:
   m_ObjectHideFlags: 0
