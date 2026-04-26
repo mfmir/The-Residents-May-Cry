@@ -105,8 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8d66f638bad4ec3b15bdc2d2f7d5bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  spawnPoint: {x: -68.38118, y: -3.59, z: -230.4817}
   onLaserTouchedMaterial: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  playerGotHitSequence: {fileID: 0}
 --- !u!65 &4151562018766476780
 BoxCollider:
   m_ObjectHideFlags: 0

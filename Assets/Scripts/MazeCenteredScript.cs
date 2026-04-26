@@ -8,7 +8,7 @@ public class MazeCenteredScript : MonoBehaviour
     public int mazeRotatingTime;
     public int rotatingCycleLength;
     private int _mazeRotatingCounter = 0;
-
+    
     public int laserAppearanceCycleCount;
     public int laserDisappearanceCycleCount;
     private bool _lasersAppearing = true;

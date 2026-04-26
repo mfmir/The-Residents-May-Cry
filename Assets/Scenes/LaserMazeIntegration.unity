@@ -1075,8 +1075,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3659582990859700635, guid: 95be400f746f34f558ac93c0167572b2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3659582990859700635, guid: 95be400f746f34f558ac93c0167572b2, type: 3}
       propertyPath: rotationSpeed
       value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186061232025561562, guid: 95be400f746f34f558ac93c0167572b2, type: 3}
+      propertyPath: spawnPoint.x
+      value: -68.38118
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

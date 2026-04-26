@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LaserScript : MonoBehaviour
 {
+    public Vector3 spawnPoint;
     public Material onLaserTouchedMaterial;
     private AudioSource _playerGotHitSequence;
     
@@ -37,7 +38,7 @@ public class LaserScript : MonoBehaviour
             Debug.Log(other.transform.parent);
             
             _playerGotHitSequence.Play();
-            MovePlayer(other, new Vector3(-68, -3.5f, -230.5f));
+            MovePlayer(other, spawnPoint);
         }
     }
 }
