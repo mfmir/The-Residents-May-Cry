@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 134123770389625400}
+  - component: {fileID: 3375723641534244451}
   m_Layer: 0
   m_Name: MazeCentered
   m_TagString: Untagged
@@ -32,6 +33,23 @@ Transform:
   - {fileID: 4247240623406496712}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3375723641534244451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7589232346880685255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39011aae0ffd4415c8ea891cd5762456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MazeCenteredScript
+  rotationSpeed: 0.03
+  mazeRotatingTime: 1000
+  rotatingCycleLength: 3000
+  laserAppearanceCycleCount: 5
+  laserDisappearanceCycleCount: 1
 --- !u!1001 &6155211060933896900
 PrefabInstance:
   m_ObjectHideFlags: 0
