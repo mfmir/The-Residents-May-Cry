@@ -37,7 +37,7 @@ public class SecondSceneExitDoorScript : MonoBehaviour
             
             if (SecondSceneData.minigameFinished && Keyboard.current.eKey.wasPressedThisFrame)
             {
-                SceneManager.LoadScene("blabla");
+                SceneManager.LoadScene("LaserMazeIntegration");
             }
         }
         else

@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using StarterAssets;
 using UnityEngine;
 using UnityEngine.UI;
@@ -37,12 +38,14 @@ public class TriggerDialogBox_STOP : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         if (finished) return;
         if (audio.isPlaying) return;
+        if (SecondSceneData.minigameFinished) return;
+        
         ShowText();
         audio.Play();
         Debug.Log("Player entered trigger!");
+        
         EnableNextTrigger();
         triggered = true;
-        
     }
 
     private void OnTriggerExit(Collider other)
