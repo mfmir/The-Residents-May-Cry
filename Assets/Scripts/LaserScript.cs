@@ -1,5 +1,3 @@
-using System;
-using System.Transactions;
 using UnityEngine;
 
 public class LaserScript : MonoBehaviour
@@ -20,7 +18,7 @@ public class LaserScript : MonoBehaviour
         
     }
 
-    private void MovePlayer(Collider playerCollision, Vector3 position)
+    private static void MovePlayer(Collider playerCollision, Vector3 position)
     {
         var controller = playerCollision.GetComponent<CharacterController>();
         controller.enabled = false;
