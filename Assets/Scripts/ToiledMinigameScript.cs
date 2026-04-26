@@ -1,7 +1,11 @@
 using System;
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
 
 public class ToiledMinigameScript : MonoBehaviour
 {
@@ -17,6 +21,15 @@ public class ToiledMinigameScript : MonoBehaviour
     {
         canvas.enabled = false;
         game.gameObject.SetActive(false);
+        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+        if (SecondSceneData.loadData)
+        {
+            player.position = SecondSceneData.position;
+            player.rotation = SecondSceneData.rotation;
+        }
     }
 
     // Update is called once per frame
@@ -30,8 +43,12 @@ public class ToiledMinigameScript : MonoBehaviour
 
             if (Keyboard.current.eKey.wasPressedThisFrame)
             {
-                game.gameObject.SetActive(true);
-                world.gameObject.SetActive(false);
+                SecondSceneData.position = player.position;
+                SecondSceneData.rotation = player.rotation;
+                SecondSceneData.loadData = true;
+                SecondSceneData.minigameFinished = true;
+                
+                SceneManager.LoadScene("Toilet");
             }
         } else {
             canvas.enabled = false;

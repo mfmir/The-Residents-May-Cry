@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections;
 using UnityEngine.InputSystem;
@@ -9,6 +10,12 @@ public class ToiletMoveDragS : MonoBehaviour
     private bool hit = false;
     private Vector3 screenPoint;
     private Vector3 offset;
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 
     void OnMouseDown()
     {

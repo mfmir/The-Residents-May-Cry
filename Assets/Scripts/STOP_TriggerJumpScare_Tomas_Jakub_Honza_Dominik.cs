@@ -6,8 +6,8 @@ public class STOP_TriggerJumpScare_Tomas : MonoBehaviour
 {
     private RawImage lockerImageUI;
     [SerializeField] private Texture imageToShow;
-    [SerializeField] private TriggerJumpScare_Tomas enableNextJumpScareTrigger;
-    [SerializeField] private TriggerDialogBox_Tomas enableNextDialogScareTrigger;
+    [SerializeField] private STOP_TriggerJumpScare_Tomas enableNextJumpScareTrigger;
+    [SerializeField] private TriggerDialogBox_STOP enableNextDialogScareTrigger;
     [SerializeField] private Transform player;
     Canvas LockerImage;
     bool triggered = false;
@@ -35,6 +35,11 @@ public class STOP_TriggerJumpScare_Tomas : MonoBehaviour
         {
             finished = true;
             HideImage();
+            
+        }
+        if (finished && !audio.isPlaying)
+        {
+            gameObject.SetActive(false);
         }
     }
     private void OnTriggerEnter(Collider other)

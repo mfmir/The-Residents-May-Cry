@@ -6,8 +6,8 @@ using TMPro;
 public class TriggerDialogBox_STOP : MonoBehaviour
 {
     [SerializeField] private string textToShow;
-    [SerializeField] private TriggerJumpScare_Tomas enableNextJumpScareTrigger;
-    [SerializeField] private TriggerDialogBox_Tomas enableNextDialogScareTrigger;
+    [SerializeField] private STOP_TriggerJumpScare_Tomas enableNextJumpScareTrigger;
+    [SerializeField] private TriggerDialogBox_STOP enableNextDialogScareTrigger;
     [SerializeField] private Transform player;
     Canvas canvas;
     bool triggered = false;
@@ -29,6 +29,7 @@ public class TriggerDialogBox_STOP : MonoBehaviour
     {
         finished = true;
         HideText();
+        gameObject.SetActive(false);
     }
 }
     private void OnTriggerEnter(Collider other)
