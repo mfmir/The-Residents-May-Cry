@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using StarterAssets;
 using UnityEngine;
 using UnityEngine.UI;
@@ -65,7 +66,7 @@ public class STOP_TriggerJumpScare_Tomas : MonoBehaviour
     }
     public void Jumpscare()
     {
-        if (finished) return;
+        if (finished || SecondSceneData.minigameFinished) return;
         ShowImage();
         audio.Play();
         Debug.Log("Player entered trigger!");
