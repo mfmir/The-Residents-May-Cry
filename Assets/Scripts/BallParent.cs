@@ -12,6 +12,10 @@ public class BallParent : MonoBehaviour
     Canvas canvas;
     private PapaBallScript parent;
 
+    [SerializeField] private Transform player;
+    [SerializeField] private float interactDistance = 3f;
+    [SerializeField] private Canvas interactableText;
+
     protected void setMyNumber(int number)
     {
         myNumber = number;
@@ -20,7 +24,20 @@ public class BallParent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (selected && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+        /*if (selected && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            
+        }*/
+
+        float distance = Vector3.Distance(player.position, transform.position);
+        //show press E
+        if (distance <= interactDistance && selected)
+        {
+            interactableText.enabled = true;
+        }
+        else interactableText.enabled = false;
+        // If player is close and presses E → show
+        if (distance <= interactDistance && Keyboard.current.eKey.wasPressedThisFrame  && selected)
         {
             CallParentThatIWasPressed();
         }
@@ -61,10 +78,10 @@ public class BallParent : MonoBehaviour
         }
     }
     
-    private void OnMouseDown()
+    /*private void OnMouseDown()
     {
         CallParentThatIWasPressed();
-    }
+    }*/
 
     private void OnMouseEnter()
     {

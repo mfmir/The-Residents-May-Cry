@@ -1577,7 +1577,7 @@ PrefabInstance:
       objectReference: {fileID: 1133397098}
     - target: {fileID: 2772293157377443149, guid: 0847ebcc96788dccfa725c36b6111ef3, type: 3}
       propertyPath: textToShow
-      value: Narrator:\nHAHAHAH, you really thought that I would make this so easy
+      value: Resident:\nHAHAHAH, you really thought that I would make this so easy
         for you?! We're just getting started. Solve my Impossible Puzzle, and you
         may yet survive.
       objectReference: {fileID: 0}
@@ -1920,7 +1920,7 @@ PrefabInstance:
       objectReference: {fileID: 1133397098}
     - target: {fileID: 2772293157377443149, guid: 0847ebcc96788dccfa725c36b6111ef3, type: 3}
       propertyPath: textToShow
-      value: Narrator:\nImpossible! How can this be!!! Well, no matter. It's not
+      value: Resident:\nImpossible! How can this be!!! Well, no matter. It's not
         over yet!!
       objectReference: {fileID: 0}
     - target: {fileID: 4837287852585554571, guid: 0847ebcc96788dccfa725c36b6111ef3, type: 3}
@@ -3165,7 +3165,7 @@ PrefabInstance:
       objectReference: {fileID: 1133397098}
     - target: {fileID: 2772293157377443149, guid: 0847ebcc96788dccfa725c36b6111ef3, type: 3}
       propertyPath: textToShow
-      value: Narrator:\nWelcome Player. So, you want to see what my Haunted House
+      value: Resident:\nWelcome Player. So, you want to see what my Haunted House
         has to offer hmmm? Well... Go open that door and let's get started
       objectReference: {fileID: 0}
     - target: {fileID: 2772293157377443149, guid: 0847ebcc96788dccfa725c36b6111ef3, type: 3}
@@ -3414,6 +3414,10 @@ PrefabInstance:
       propertyPath: enableNextDialogScareTrigger
       value: 
       objectReference: {fileID: 1503385728}
+    - target: {fileID: 3506548409276913604, guid: 7e557643a4edb9041bc68cab8b8057a5, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1133397098}
     - target: {fileID: 5216982749540554998, guid: 7e557643a4edb9041bc68cab8b8057a5, type: 3}
       propertyPath: m_Pitch
       value: 3
@@ -3478,10 +3482,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6623162238012209931, guid: 7e557643a4edb9041bc68cab8b8057a5, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1133397098}
     - target: {fileID: 7847308421979997582, guid: 7e557643a4edb9041bc68cab8b8057a5, type: 3}
       propertyPath: m_Pitch
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9181570476043380339, guid: 7e557643a4edb9041bc68cab8b8057a5, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1133397098}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
