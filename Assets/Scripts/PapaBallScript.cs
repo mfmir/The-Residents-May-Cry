@@ -8,7 +8,7 @@ public class PapaBallScript : MonoBehaviour, IWinCondition
     private bool done = false;
     Queue<int> active = new Queue<int>();
     [SerializeField] private TriggerDialogBox_STOP enableNextDialogScareTrigger;
-    
+    new public AudioSource audio;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -35,6 +35,7 @@ public class PapaBallScript : MonoBehaviour, IWinCondition
         {
             Debug.Log("You got the answer!");
             enableNextDialogScareTrigger.gameObject.SetActive(true);
+            audio.Play();
             done = true;
         };
     }
