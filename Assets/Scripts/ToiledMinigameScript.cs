@@ -27,6 +27,8 @@ public class ToiledMinigameScript : MonoBehaviour
 
         if (SecondSceneData.loadData)
         {
+            Debug.Log(SecondSceneData.position);
+            Debug.Log(SecondSceneData.rotation);
             player.position = SecondSceneData.position;
             player.rotation = SecondSceneData.rotation;
         }
@@ -45,8 +47,6 @@ public class ToiledMinigameScript : MonoBehaviour
             {
                 SecondSceneData.position = player.position;
                 SecondSceneData.rotation = player.rotation;
-                SecondSceneData.loadData = true;
-                SecondSceneData.minigameFinished = true;
                 
                 SceneManager.LoadScene("Toilet");
             }

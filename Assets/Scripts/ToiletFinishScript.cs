@@ -1,3 +1,4 @@
+using DefaultNamespace;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -24,6 +25,9 @@ public class ToiletFinishScript : MonoBehaviour
         
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            SecondSceneData.loadData = true;
+            SecondSceneData.minigameFinished = true;
+            
             SceneManager.LoadScene("SecondScene");
         }
     }
