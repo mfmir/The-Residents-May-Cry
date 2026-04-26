@@ -10,20 +10,20 @@ public class TriggerDialogBox_Tomas : MonoBehaviour
     Canvas canvas;
     bool triggered = false;
     bool finished = false;
-    new public AudioSource audio; //jumpscareaudio
+    [SerializeField] private AudioSource audioSource;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         canvas = GetComponentInChildren<Canvas>(true);
         TextMeshProUGUI text = canvas.GetComponentInChildren<TextMeshProUGUI>(true);
         text.text = textToShow;
-        audio = GetComponent<AudioSource>();
+        //audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
 {
-    if (triggered && !audio.isPlaying && !finished)
+    if (triggered && !GetComponent<AudioSource>().isPlaying && !finished)
     {
         finished = true;
         HideText();
@@ -34,9 +34,9 @@ public class TriggerDialogBox_Tomas : MonoBehaviour
     {
         if (!other.CompareTag("Player")) return;
         if (finished) return;
-        if (audio.isPlaying) return;
+        if (GetComponent<AudioSource>().isPlaying) return;
         ShowText();
-        audio.Play();
+        GetComponent<AudioSource>().Play();
         Debug.Log("Player entered trigger!");
         
         triggered = true;
