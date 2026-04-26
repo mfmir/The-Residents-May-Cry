@@ -35,7 +35,7 @@ public class SecondSceneExitDoorScript : MonoBehaviour
             }
             
             
-            if (Keyboard.current.eKey.wasPressedThisFrame)
+            if (SecondSceneData.minigameFinished && Keyboard.current.eKey.wasPressedThisFrame)
             {
                 SceneManager.LoadScene("blabla");
             }
