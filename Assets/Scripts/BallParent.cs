@@ -33,6 +33,9 @@ public class BallParent : MonoBehaviour
         TextMeshProUGUI text = canvas.GetComponentInChildren<TextMeshProUGUI>(true);
         text.text = myNumber.ToString();
         parent = transform.parent.GetComponent<PapaBallScript>();
+        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
     }
 
