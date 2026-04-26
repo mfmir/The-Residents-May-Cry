@@ -1807,6 +1807,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7600123536740005696, guid: 0847ebcc96788dccfa725c36b6111ef3, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 624a26e55e7f45748ac396fb992c9173, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2145,6 +2149,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7600123536740005696, guid: 0847ebcc96788dccfa725c36b6111ef3, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: bd85c9cf43b5bd64f8fe6f31adf9bb3e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3386,6 +3394,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: STOP_TriggerBox_Narative_ID1
       objectReference: {fileID: 0}
+    - target: {fileID: 7600123536740005696, guid: 0847ebcc96788dccfa725c36b6111ef3, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600123536740005696, guid: 0847ebcc96788dccfa725c36b6111ef3, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: 8b4e6729702473a4d9285aa519589c5c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
