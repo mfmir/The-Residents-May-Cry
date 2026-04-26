@@ -5,10 +5,12 @@ using UnityEngine;
 public class LaserScript : MonoBehaviour
 {
     public Material onLaserTouchedMaterial;
+    private AudioSource _playerGotHitSequence;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        _playerGotHitSequence = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class LaserScript : MonoBehaviour
             currentRenderer.material = onLaserTouchedMaterial;
             Debug.Log(other.transform.parent);
             
+            _playerGotHitSequence.Play();
             MovePlayer(other, new Vector3(-68, -3.5f, -230.5f));
         }
     }
