@@ -31,7 +31,7 @@ public class SecondSceneExitDoorScript : MonoBehaviour
             
             if (SecondSceneData.minigameFinished)
             {
-                canvasText.text = "Press <E> to open";
+                canvasText.text = "Press E to Open";
             }
             
             
