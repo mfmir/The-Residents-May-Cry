@@ -46,6 +46,7 @@ public class ToiledMinigameScript : MonoBehaviour
                 SecondSceneData.position = player.position;
                 SecondSceneData.rotation = player.rotation;
                 SecondSceneData.loadData = true;
+                SecondSceneData.minigameFinished = true;
                 
                 SceneManager.LoadScene("Toilet");
             }
