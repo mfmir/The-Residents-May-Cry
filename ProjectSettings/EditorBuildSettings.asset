@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Toilet.unity
     guid: 0f37b7954284b4e798c46c3e9236a55c
+  - enabled: 1
+    path: Assets/Scenes/LaserMazeIntegration.unity
+    guid: 017b4aca8b8b040c59cc8a33c02515f9
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
