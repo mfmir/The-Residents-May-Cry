@@ -3503,9 +3503,18 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 457908cc7374a27418c3af22686cf39f, type: 2}
     - target: {fileID: 8193286616786727831, guid: 95be400f746f34f558ac93c0167572b2, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8193286616786727831, guid: 95be400f746f34f558ac93c0167572b2, type: 3}
+      propertyPath: textToShow
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193286616786727831, guid: 95be400f746f34f558ac93c0167572b2, type: 3}
+      propertyPath: m_EditorClassIdentifier
+      value: Assembly-CSharp::TriggerDialogBox_Tomas
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8193286616786727831, guid: 95be400f746f34f558ac93c0167572b2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
