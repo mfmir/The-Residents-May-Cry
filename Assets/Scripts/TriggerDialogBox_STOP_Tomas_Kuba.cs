@@ -10,6 +10,7 @@ public class TriggerDialogBox_STOP : MonoBehaviour
     [SerializeField] private STOP_TriggerJumpScare_Tomas enableNextJumpScareTrigger;
     [SerializeField] private TriggerDialogBox_STOP enableNextDialogScareTrigger;
     [SerializeField] private Transform player;
+    [SerializeField] private bool PlayAfterSecondPuzzle;
     Canvas canvas;
     bool triggered = false;
     bool finished = false;
@@ -21,6 +22,11 @@ public class TriggerDialogBox_STOP : MonoBehaviour
         TextMeshProUGUI text = canvas.GetComponentInChildren<TextMeshProUGUI>(true);
         text.text = textToShow;
         audio = GetComponent<AudioSource>();
+
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player")?.transform;
+        }
     }
 
     // Update is called once per frame
@@ -38,7 +44,7 @@ public class TriggerDialogBox_STOP : MonoBehaviour
         if (!other.CompareTag("Player")) return;
         if (finished) return;
         if (audio.isPlaying) return;
-        if (SecondSceneData.minigameFinished) return;
+        if (SecondSceneData.minigameFinished && !PlayAfterSecondPuzzle) return;
         
         ShowText();
         audio.Play();
@@ -58,6 +64,7 @@ public class TriggerDialogBox_STOP : MonoBehaviour
     private void ShowText()
     {
         Debug.Log("Showing image");
+        canvas = GetComponentInChildren<Canvas>(true);
         canvas.enabled = true;
         player.gameObject.GetComponent<FirstPersonController>().stopped = true;
     }

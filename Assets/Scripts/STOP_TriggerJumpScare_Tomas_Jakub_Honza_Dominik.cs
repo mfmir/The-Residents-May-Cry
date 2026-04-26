@@ -10,6 +10,7 @@ public class STOP_TriggerJumpScare_Tomas : MonoBehaviour
     [SerializeField] private STOP_TriggerJumpScare_Tomas enableNextJumpScareTrigger;
     [SerializeField] private TriggerDialogBox_STOP enableNextDialogScareTrigger;
     [SerializeField] private Transform player;
+    [SerializeField] private bool PlayAfterSecondPuzzle;
     Canvas LockerImage;
     bool triggered = false;
     bool finished = false;
